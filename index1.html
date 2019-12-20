@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Vue js Tutorial</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="vue_component">
+            {{ run('hello iam the concatinate message') }}
+            <!-- function for the Vue Js -->
+            <p style="color: red;">{{ wellcome() }}</p>
+            <p>{{ ValueAccess() }}</p>
+        </div>
+
+    </div>
+    <hr>
+
+    <div class="container">
+        <p class="text-center"><strong>*HTML Attrubutes Binding<br>*Html Content Binding<br>*Form Input Binding<br>*Html Class Binding</strong></p>
+        <div id="my-app">
+            <p>Name:{{ name }}</p>
+            <p>Address:{{ address }}</p>
+            <p>Job:{{ job }}</p>
+            <p>Mobile:{{ mobile }}</p>
+            <a v-bind:href="ulink">Link</a>
+            <!-- <img v-bind:src="image" v-bind:alt="alt"> -->
+            <br>
+            <form method="post" action="">
+                <input type="text" v-bind:value="inTxt" placeholder="Name">
+                <input type="text" v-bind:value="intEmail" placeholder="Email">
+                <button type="submit" name="button">Submit</button>
+            </form>
+            <div v-html="htmlContent"></div>
+
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>
